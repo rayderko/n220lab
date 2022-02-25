@@ -110,12 +110,12 @@
 //   }
 // let i = 0;
 // let favoray =["pizza", "wings", "star wars", "coffee", "legos"];
-for(i=1;i<11;i++){
-    console.log(i)
-}
-for(i=10;i>0;i--){
-    console.log(i)
-}
+// for(i=1;i<11;i++){
+//     console.log(i)
+// }
+// for(i=10;i>0;i--){
+//     console.log(i)
+// }
 
 // // - Write a loop that prints to the console the first 20 numbers of the Fibonacci sequence ( starting at zero, 
 // //     the next number in the sequence is the sum of the previous two numbers: 0, 1, 1, 2, 3, 5, 8, 13.... and so on 
@@ -129,11 +129,24 @@ for(i=10;i>0;i--){
 // - Given the array: let words = [ "Indiana", "University", "Purdue", "University", "Indianapolis" ],
 //  write a loop that reverses the array. Log the reversed array out to the console
 
-let words = [ "Indiana ", "University ", "Purdue ", "University ", "Indianapolis " ];
-let wordsbackwards = [];
-for(i=4;i>-1;i--){
-    wordsbackwards += words[i];
+// let words = [ "Indiana ", "University ", "Purdue ", "University ", "Indianapolis " ];
+// let wordsbackwards = [];
+// for(i=4;i>-1;i--){
+//     wordsbackwards += words[i];
+
+// }
+// console.log(wordsbackwards)
+
+let array1 = [ 1,2, 25, 21 ];
+let array2 = [ 55, 66, 77, 88, 99 ];
+
+count20(array1);
+
+function count20(a){
+for (i=0;i>length.a;i++){
+    console.log(a[i]);
+}
 
 }
-console.log(wordsbackwards)
 
+count20(array1);

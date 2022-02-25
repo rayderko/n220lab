@@ -1,8 +1,8 @@
-function checkValues() {
-console.log(boxHeight);
-console.log(boxWidth);
-console.log(divBox2.getAttribute('id'));
-}
+// function checkValues() {
+// console.log(boxHeight);
+// console.log(boxWidth);
+// console.log(divBox2.getAttribute('id'));
+// }
 
 var divBox = document.createElement("div");
 divBox.setAttribute('id','box');
@@ -20,3 +20,6 @@ document.getElementById('box').onmouseover = function turnBlack() {
 document.getElementById('box').onmouseout = function turnBlue() {
     box.style.backgroundColor = "blue";
 }
+
+// // Create a square in the middle of the page. Create an array of 4 random colors. Have the square cycle 
+// // through the colors at a slower frame rate. 
