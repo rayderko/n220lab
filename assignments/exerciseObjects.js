@@ -140,7 +140,6 @@
 let array1 = [ 1,2, 25, 21 ];
 let array2 = [ 55, 66, 77, 88, 99 ];
 
-count20(array1);
 
 function count20(a){
 for (i=0;i>length.a;i++){

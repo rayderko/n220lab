@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>UI Navigation</title>
+    <head>
+
+        <style>
+        
+        .card{
+        
+        height: 50px;
+        
+        width: 50px;
+        
+        border: 1px solid black;
+        
+        margin: 20px;
+        
+        display: flex;
+        
+        justify-content: center;
+        
+        align-items: center;
+        
+        cursor: pointer;
+        
+        }
+        
+        .main-div{
+        
+        display: flex;
+        
+        flex-wrap: wrap;
+        
+        }
+        
+        .click{
+        
+        background-color: blue;
+        
+        font-weight: bold;
+        
+        }
+        
+        #clickedItem{
+        
+        font-size: 25px;
+        
+        font-weight: bold;
+        
+        display: flex;
+        
+        justify-content: center;
+        
+        width: 100vw;
+        
+        }
+        
+        </style>
+        
+        </head>
+        
+        <body>
+        
+        <div id="clickedItem">
+        
+        </div>
+        
+        
+        
+        <div class="main-div">
+        
+        <div class="card" id="1" onclick="addRemove(1)" >
+        
+        Mango
+        
+        </div>
+        
+        <div class="card" id="2" onclick="addRemove(2)">
+        
+        Apple
+        
+        </div>
+        
+        <div class="card" id="3" onclick="addRemove(3)">
+        
+        Banana
+        
+        </div>
+        
+        <div class="card" id="4" onclick="addRemove(4)">
+        
+        Guvva
+        
+        </div>
+        
+        <div class="card" id="5" onclick="addRemove(5)">
+        
+        Pine Apple
+        
+        </div>
+        
+        <div class="card" id="6" onclick="addRemove(6)">
+        
+        Jack fruit
+        
+        </div>
+        
+        </div>
+        
+        <script>
+        
+        const addRemove=(id)=>{
+        
+        const clickedItem=document.getElementById("clickedItem");
+        
+        for(let i=1;i<=6;i++){
+        
+        
+        const element=document.getElementById(i)
+        
+        if(i==id){
+        
+        element.classList.add('click');
+        
+        clickedItem.textContent=element.textContent
+        
+        }
+        
+        else{
+        
+        element.classList.remove('click');
+        
+        }
+        
+        }
+        
+        }
+        
+        </script>
+        
+        </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    
+        
+          Player <span id="p-score">0</span>
+        </h3>
+        <button class="options">Rock</button>
+        <button class="options">Paper</button>
+        <button class="options">Scissors</button>
+        <script>
+          const options = document.querySelectorAll(".options");
+          let pScore = 0;
+          let cScore = 0;
+      
+          options.forEach((option) => {
+            option.addEventListener("click", function () {
+              const pInput = this.textContent;
+      
+              const cOptions = ["Rock", "Paper", "Scissors"];
+              const cInput = cOptions[Math.floor(Math.random() * 3)];
+      
+              compareInputs(pInput, cInput);
+              updateScore();
+              
+            });
+          });
+      
+          function compareInputs(pInput, cInput) {
+            const currentMatch = `${pInput} vs ${cInput}`;
+            if (pInput === cInput) {
+              console.log(`${currentMatch} is a Tie`);
+              return;
+            }
+      
+            if (pInput === "Rock") {
+              if (cInput === "Scissors") {
+                console.log(`${currentMatch} = You Win`);
+                pScore++;
+              } else {
+                console.log(`${currentMatch} = Computer Wins`);
+                pScore--;
+              }
+            }
+            //Check for Paper
+            else if (pInput === "Paper") {
+              if (cInput === "Rock") {
+                console.log(`${currentMatch} = You Win`);
+                pScore++;
+              } else {
+                console.log(`${currentMatch} = Computer Wins`);
+                pScore--
+              }
+            }
+            //Check for Scissors
+            else {
+              if (cInput === "Paper") {
+                console.log(`${currentMatch} = You Win`);
+                pScore++;
+              } else {
+                console.log(`${currentMatch} = Computer Wins`);
+                pScore--
+              }
+            }
+          }
+      
+          function updateScore() {
+            document.getElementById("p-score").textContent = pScore;
+        
+          }
+      
+          function checkWinner() {
+            if (pScore === 5 || cScore === 5) {
+              const winner =
+                pScore === 5
+                  ? "You win the game! Congratulations!"
+                  : "Computer wins the game! Try again next time!";
+              console.log(winner);
+              return true;
+            }
+            return false;
+          }
+        </script>
+      
+</body>
+</html>
