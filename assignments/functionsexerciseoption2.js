@@ -5,8 +5,8 @@ function noHashtags(){
     let outcome = "";
     for(i=0;i<word.length;i++){
         if(word[i]!="#"){
-        outcome+=word[i];
-        txtName.value=""           
+        outcome+=word[i]  
+                        
                         
         }
     }
