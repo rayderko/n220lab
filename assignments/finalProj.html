@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    h1 {
+        text-align: center;
+      }
+    </style>
+    <title>Final Project</title>
+</head>
+<body>
+   <h1>NBA Finals Simulation</h1>
+   <h3>Select one team from each conference (east and west), and select which simulation style you'd like to see the winner of your NBA Finals! First to 4 wins is the champion.
+   </h3>
+   <!-- Below are two tables of buttons made to represent each NBA team -->
+   <div id="buttons">
+    <table>
+        <tr><H3>East Teams</H3></tr>
+        <tr>
+            <!-- these buttons are linked to a function that is triggered by a click. 
+                The function finds which nba team the user has selected and prints it to the screen -->
+                <!-- MOUSE INTERACTIONS! -->
+            <td><button onclick="eastSelection('Celtics')">Celtics</button></td>
+            <td><button onclick="eastSelection('76ers')">76ers</button></td>
+            <td><button onclick="eastSelection('Raptors')">Raptors</button></td>
+            <td><button onclick="eastSelection('Nets')">Nets</button></td>
+            <td><button onclick="eastSelection('Knicks')">Knicks</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="eastSelection('Bucks')">Bucks</button></td>
+            <td><button onclick="eastSelection('Bulls')">Bulls</button></td>
+            <td><button onclick="eastSelection('Cavaliers')">Cavaliers</button></td>
+            <td><button onclick="eastSelection('Pacers')">Pacers</button></td>
+            <td><button onclick="eastSelection('Pistons')">Pistons</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="eastSelection('Heat')">Heat</button></td>
+            <td><button onclick="eastSelection('Hawks')">Hawks</button></td>
+            <td><button onclick="eastSelection('Hornets')">Hornets</button></td>
+            <td><button onclick="eastSelection('Wizards')">Wizards</button></td>
+            <td><button onclick="eastSelection('Magic')">Magic</button></td>
+        </tr>
+    </table>
+    
+    <table>
+         <!-- these buttons are linked to a function that is triggered by a click. 
+                The function finds which nba team the user has selected and prints it to the screen -->
+                <!-- MOUSE INTERACTIONS! -->
+        <tr><H3>West Teams</H3></tr>
+        <tr>
+            <td><button onclick="westSelection('Pelicans')">Pelicans</button></td>
+            <td><button onclick="westSelection('Rockets')">Rockets</button></td>
+            <td><button onclick="westSelection('Spurs')">Spurs</button></td>
+            <td><button onclick="westSelection('Mavericks')">Mavericks</button></td>
+            <td><button onclick="westSelection('Grizzlies')">Grizzlies</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="westSelection('Lakers')">Lakers</button></td>
+            <td><button onclick="westSelection('Clippers')">Clippers</button></td>
+            <td><button onclick="westSelection('Kings')">Kings</button></td>
+            <td><button onclick="westSelection('Warriors')">Warriors</button></td>
+            <td><button onclick="westSelection('Suns')">Suns</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="westSelection('Nuggets')">Nuggets</button></td>
+            <td><button onclick="westSelection('Trailblazers')">Trailblazers</button></td>
+            <td><button onclick="westSelection('Jazz')">Jazz</button></td>
+            <td><button onclick="westSelection('Timberwolves')">Timberwolves</button></td>
+            <td><button onclick="westSelection('Thunder')">Thunder</button></td>
+        </tr>
+    </table>
+</div><H2>
+<br/><br/>
+<!-- Below are Divs made to display information regarding the teams selected and the results of the simulation -->
+<div>Teams selected: </div>
+<br/>
+<div id="East"> </div>
+<div>vs</div>
+<div id="West"> </div> </H2>
+
+<!-- the two buttons below are made for single sim games and 7 game series sims, each made with their own function -->
+<!-- MOUSE INTERACTIONS! -->
+<button id="single" onclick="singleSim()">Simulate One Game</button>
+<button id="full" onclick="fullSim()">Simulate Entire 7 Game Series</button>
+<br/>
+<h1><div id="Results"></div></h1>
+
+<script src= "finalProj.js"></script>
+</body>
+</html>
