@@ -43,10 +43,12 @@ function singleSim(){
        //manipulating the document object
     results.innerHTML=((eastern)+(" win the finals ")+(eastWins)+("-")+(westWins));
     eastWins=0;
+    westWins=0;
    }
    if (westWins > 3){
        //manipulating the document object
     results.innerHTML=((western)+(" win the finals ")+(eastWins)+("-")+(westWins));
+    eastWins=0;
     westWins=0;
 
    }
